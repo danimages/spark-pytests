@@ -64,4 +64,5 @@ WORKDIR $SPARK_HOME
 RUN pip install pytest \
  && pip install pyyaml \
  && pip install pytest-spark
+ADD https://repo1.maven.org/maven2/org/apache/spark/spark-hive_2.11/2.4.1/spark-hive_2.11-2.4.1.jar $SPARK_HOME/jars
 CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
